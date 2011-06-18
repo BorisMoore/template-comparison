@@ -130,7 +130,7 @@ function runTests() {
         expectedText = trimmedText(expectedCell);
         actualCell.appendChild(document.createTextNode(result));
         normResult = trim(result);
-        pass = /^Error:/.test(expectedText);
+        pass = /^Error:/.test(expectedText)
       } else {
         actualCell.innerHTML = result;
         normResult = actualCell.innerHTML;
