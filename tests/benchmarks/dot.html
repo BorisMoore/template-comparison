@@ -27,14 +27,15 @@
 
 
 <script type="text/javascript">
-	var tmpl, res, startTime, endTime, result,
+	var tmpl, res, endTime, result,
 		times = 1000,
 		count = times;
-		movie = { Name: "The Red Violin", ReleaseYear: "1998" };
-
-	startTime = +new Date;
+		movie = { Name: "The Red Violin", ReleaseYear: "1998" },
+		startTime = +new Date;
+		tmplString = $( "#movieTemplate" )[0].innerHTML;
+		
 	while (count--) {
-		tmpl = doT.template($( "#movieTemplate" )[0].innerHTML);
+		tmpl = doT.template( tmplString );
 	} 
 	endTime = +new Date;
 	result = ( endTime-startTime )/times;
@@ -53,10 +54,6 @@
 </script>
 
 <!--================ End of Demo Section ================-->
-
-
-</body>
-</html>
 
 
 </body>
